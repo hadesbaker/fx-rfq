@@ -1,0 +1,43 @@
+# Non-secret settings. Contract addresses are public and belong here.
+# RPC URLs carry provider API keys and private keys are private keys, so both
+# live in .env, which is gitignored.
+
+default_network = "local"
+
+[auction]
+dealers = 8
+window_ms = 250
+# How long the signed price stays good for. The contract enforces it.
+# Deliberately long: a real quote lives one to three seconds, but these
+# commands are driven by a human at a prompt. Set it to 3 to watch `open`
+# fail against an expired price.
+ttl_secs = 60
+# Fixed so a run reproduces. Change it and a different dealer wins.
+seed = 11
+
+[market]
+pair = "USD/BRL"
+spot = 5.40
+r_base = 0.04
+r_quote = 0.12
+tenor_days = 122
+# Base currency units.
+notional = 10000000.0
+# Collateral required from each side, in whole collateral tokens.
+collateral = 500000.0
+
+# Filled in by `forge script Deploy`, which prints these.
+#
+# The local addresses below are anvil's deterministic deployment from account 0
+# at nonces 0, 1 and 2, so they stay correct across restarts as long as the
+# deploy is the first thing that account does.
+[networks.local]
+settlement = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+collateral_token = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+oracle = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+
+[networks.sepolia]
+settlement = "0x0000000000000000000000000000000000000000"
+collateral_token = "0x0000000000000000000000000000000000000000"
+oracle = "0x0000000000000000000000000000000000000000"
+

@@ -1,0 +1,20 @@
+# Build output. Patterns with no internal slash match at any depth; the
+# two-component ones need **/ or they anchor to this directory only.
+target/
+broadcast/
+**/contracts/out/
+**/contracts/cache/
+
+# Foundry dependencies. Installed rather than committed, so the repository
+# contains only this project's own code:
+#   cd rfq-dapp/contracts && forge install foundry-rs/forge-std
+**/contracts/lib/
+
+# Secrets. Each project also ignores this; belt and braces.
+.env
+*.pem
+*.key
+
+# macOS
+.DS_Store
+Icon?

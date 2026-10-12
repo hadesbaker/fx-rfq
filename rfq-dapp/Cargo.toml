@@ -1,0 +1,20 @@
+[package]
+name = "rfq-dapp"
+version = "0.1.0"
+edition = "2021"
+description = "Off-chain RFQ auction with on-chain settlement: dealers sign EIP-712 quotes, the client submits the winner."
+license = "MIT"
+keywords = ["rfq", "fx", "eip712", "ethereum"]
+categories = ["finance", "cryptography::cryptocurrencies"]
+
+[dependencies]
+alloy = { version = "2", features = ["full", "node-bindings"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time"] }
+eyre = "0.6"
+dotenvy = "0.15"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+clap = { version = "4", features = ["derive"] }
+rand = "0.8"
+rfq-engine = { path = "../rfq-engine" }
+fx-forward-pricer = { path = "../fx-forward-pricer" }

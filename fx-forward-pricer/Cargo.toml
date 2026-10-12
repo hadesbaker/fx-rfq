@@ -1,0 +1,11 @@
+[package]
+name = "fx-forward-pricer"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "FX forward pricing: covered interest parity, forward points, and broken-date curve interpolation."
+license = "MIT"
+keywords = ["fx", "forwards", "finance", "ndf"]
+categories = ["finance"]
+
+[dependencies]

@@ -1,0 +1,18 @@
+[package]
+name = "rfq-engine"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "A request-for-quote engine: fans a quote request out to competing dealers concurrently, collects under a timeout, and returns the best price with an expiry."
+license = "MIT"
+keywords = ["rfq", "fx", "trading", "async"]
+categories = ["finance", "asynchronous"]
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync"] }
+async-trait = "0.1"
+rand = "0.8"
+fx-forward-pricer = { path = "../fx-forward-pricer" }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "test-util"] }

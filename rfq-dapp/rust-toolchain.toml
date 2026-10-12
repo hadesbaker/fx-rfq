@@ -1,0 +1,6 @@
+# alloy 2.x requires rustc 1.94.1 or newer. Pinned here so this project does
+# not depend on the machine's default toolchain, and so installing it does not
+# change the default for anything else.
+[toolchain]
+channel = "1.94.1"
+components = ["clippy"]

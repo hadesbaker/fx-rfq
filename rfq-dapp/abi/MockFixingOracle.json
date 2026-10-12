@@ -1,0 +1,51 @@
+{
+ "abi": [
+  {
+   "type": "function",
+   "name": "latestFixing",
+   "inputs": [
+    {
+     "name": "pair",
+     "type": "bytes32",
+     "internalType": "bytes32"
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "uint256",
+     "internalType": "uint256"
+    },
+    {
+     "name": "",
+     "type": "uint64",
+     "internalType": "uint64"
+    }
+   ],
+   "stateMutability": "view"
+  },
+  {
+   "type": "function",
+   "name": "setFixing",
+   "inputs": [
+    {
+     "name": "pair",
+     "type": "bytes32",
+     "internalType": "bytes32"
+    },
+    {
+     "name": "rate",
+     "type": "uint256",
+     "internalType": "uint256"
+    }
+   ],
+   "outputs": [],
+   "stateMutability": "nonpayable"
+  }
+ ],
+ "bytecode": {
+  "object": "0x608060405234801561000f575f80fd5b506101438061001d5f395ff3fe608060405234801561000f575f80fd5b5060043610610034575f3560e01c80635137bc9f1461003857806390ddcd8e14610091575b5f80fd5b61006f6100463660046100d6565b5f9081526020818152604080832054600190925290912054909167ffffffffffffffff90911690565b6040805192835267ffffffffffffffff90911660208301520160405180910390f35b6100d461009f3660046100ed565b5f9182526020828152604080842092909255600190529020805467ffffffffffffffff19164267ffffffffffffffff16179055565b005b5f602082840312156100e6575f80fd5b5035919050565b5f80604083850312156100fe575f80fd5b5050803592602090910135915056fea2646970667358221220825ea1f5cd32cbde6201ce2cd2a10836413e5d0d3458f250e252d3e16df8ea1964736f6c63430008140033",
+  "sourceMap": "309:436:21:-:0;;;;;;;;;;;;;;;;;;;",
+  "linkReferences": {}
+ }
+}

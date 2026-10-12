@@ -1,0 +1,9 @@
+# Secrets. Never commit this.
+.env
+
+/target
+contracts/out
+contracts/cache
+broadcast
+**/*.rs.bk
+.DS_Store

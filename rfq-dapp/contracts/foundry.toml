@@ -1,0 +1,17 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["lib"]
+optimizer = true
+optimizer_runs = 200
+solc = "0.8.20"
+
+# Pass the RPC URL explicitly rather than naming an endpoint here, so an unset
+# variable for one network cannot block work on another:
+#
+#   forge script Deploy --rpc-url http://127.0.0.1:8545 --broadcast
+#   forge script Deploy --rpc-url "$SEPOLIA_RPC_URL" --broadcast
+#
+# Etherscan verification takes --etherscan-api-key on the command line.
